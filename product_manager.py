@@ -1,5 +1,3 @@
-# product_manager.py
-
 from product import Product
 
 class ProductManager:
