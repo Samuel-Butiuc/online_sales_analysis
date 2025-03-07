@@ -1,3 +1,5 @@
+# product_manager.py
+
 from product import Product
 
 class ProductManager:
@@ -17,3 +19,12 @@ class ProductManager:
         """Calculate the total value of the inventory."""
         total = sum(product.price * product.quantity for product in self.products)
         print(f"Total Inventory Value: {total}")
+
+    def remove_product(self, product_name):
+        """Remove a product by its name."""
+        for product in self.products:
+            if product.name == product_name:
+                self.products.remove(product)
+                print(f"Product {product_name} has been removed.")
+                return
+        print(f"Product {product_name} not found.")

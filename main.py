@@ -14,7 +14,15 @@ product_manager.add_product(product1)
 product_manager.add_product(product2)
 product_manager.add_product(product3)
 
-# Display all products
+# Display all products before removal
+print("Before removing product:")
+product_manager.display_all_products()
+
+# Remove a product by name
+product_manager.remove_product("Smartphone")
+
+# Display all products after removal
+print("\nAfter removing product:")
 product_manager.display_all_products()
 
 # Display total inventory value
